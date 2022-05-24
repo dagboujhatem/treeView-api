@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c63cf87-53b8-4e8c-8104-843e25c740b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/TreeViewApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/configurations/SpringFoxConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/controllers/NodeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/controllers/WelcomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/entities/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/requests/CreateNodeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/requests/UpdateNodeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/responses/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/repositories/NodeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/services/NodeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/services/NodeServiceImpl.java" afterDir="false" />
+    <list default="true" id="6c63cf87-53b8-4e8c-8104-843e25c740b7" name="Default Changelist" comment="commit other changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +81,23 @@
       <workItem from="1653237960412" duration="337000" />
       <workItem from="1653321063638" duration="182000" />
       <workItem from="1653321260104" duration="6765000" />
-      <workItem from="1653417532675" duration="243000" />
+      <workItem from="1653417532675" duration="2141000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1653417945921</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653417945921</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit other changes">
+      <created>1653418032095</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653418032095</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +113,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="commit other changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit other changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1653327003499">
@@ -154,6 +174,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1653326884201" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1653418803677">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1653418803677" />
     <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1653326073869">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

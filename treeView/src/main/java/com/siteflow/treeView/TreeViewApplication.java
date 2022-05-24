@@ -26,8 +26,21 @@ public class TreeViewApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		nodeRepository.deleteAll();
 		List<Node> nodeList = new ArrayList<Node>();
-//		Node
-//		nodeList.add(new Node())
+		Node node1 = new Node();
+        node1.setName("HTML");
+        node1.setDescription("");
+        nodeList.add(node1);
+
+        Node node2 = new Node();
+        node2.setName("CSS");
+        node2.setDescription("");
+        nodeList.add(node2);
+
+        Node node3 = new Node();
+        node3.setName("Bootstrap");
+        node3.setDescription("");
+        nodeList.add(node3);
+
 		nodeRepository.saveAll(nodeList);
 	}
 }
