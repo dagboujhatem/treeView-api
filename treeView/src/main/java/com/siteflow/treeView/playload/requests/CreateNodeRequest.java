@@ -17,4 +17,5 @@ public class CreateNodeRequest {
     private String name;
     @NotBlank
     private String description;
+    private int parentNode;
 }

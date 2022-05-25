@@ -10,8 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c63cf87-53b8-4e8c-8104-843e25c740b7" name="Default Changelist" comment="commit other changes">
+    <list default="true" id="6c63cf87-53b8-4e8c-8104-843e25c740b7" name="Default Changelist" comment="add CommandLineRunner implémentation  to add the default nodes">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/entities/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/entities/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/requests/CreateNodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/requests/CreateNodeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/services/NodeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/services/NodeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treeView/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +55,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -81,7 +88,9 @@
       <workItem from="1653237960412" duration="337000" />
       <workItem from="1653321063638" duration="182000" />
       <workItem from="1653321260104" duration="6765000" />
-      <workItem from="1653417532675" duration="2141000" />
+      <workItem from="1653417532675" duration="3447000" />
+      <workItem from="1653429911429" duration="4489000" />
+      <workItem from="1653514008614" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1653417945921</created>
@@ -97,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653418032095</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add CommandLineRunner implémentation  to add the default nodes">
+      <created>1653421945349</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653421945349</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,23 +129,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="first commit" />
     <MESSAGE value="commit other changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit other changes" />
+    <MESSAGE value="add CommandLineRunner implémentation  to add the default nodes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add CommandLineRunner implémentation  to add the default nodes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1653327003499">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1653327003499" />
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1653326967684">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1653441476843">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1653326967684" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1653441476843" />
     <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1653326439686">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -138,46 +156,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1653327166599" />
-    <state width="1323" height="263" key="GridCell.Tab.0.bottom" timestamp="1653329195234">
+    <state width="1323" height="46" key="GridCell.Tab.0.bottom" timestamp="1653440539150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653329195234" />
-    <state width="1323" height="263" key="GridCell.Tab.0.center" timestamp="1653329195234">
+    <state width="1323" height="46" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="1323" height="46" key="GridCell.Tab.0.center" timestamp="1653440539150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1653329195234" />
-    <state width="1323" height="263" key="GridCell.Tab.0.left" timestamp="1653329195234">
+    <state width="1323" height="46" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="1323" height="46" key="GridCell.Tab.0.left" timestamp="1653440539150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1653329195234" />
-    <state width="1323" height="263" key="GridCell.Tab.0.right" timestamp="1653329195234">
+    <state width="1323" height="46" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="1323" height="46" key="GridCell.Tab.0.right" timestamp="1653440539150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1653329195234" />
-    <state width="1323" height="263" key="GridCell.Tab.1.bottom" timestamp="1653329195234">
+    <state width="1323" height="46" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="1323" height="46" key="GridCell.Tab.1.bottom" timestamp="1653440539150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653329195234" />
-    <state width="1323" height="263" key="GridCell.Tab.1.center" timestamp="1653329195234">
+    <state width="1323" height="46" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="1323" height="46" key="GridCell.Tab.1.center" timestamp="1653440539150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1653329195234" />
-    <state width="1323" height="263" key="GridCell.Tab.1.left" timestamp="1653329195234">
+    <state width="1323" height="46" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="1323" height="46" key="GridCell.Tab.1.left" timestamp="1653440539150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1653329195234" />
-    <state width="1323" height="263" key="GridCell.Tab.1.right" timestamp="1653329195234">
+    <state width="1323" height="46" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="1323" height="46" key="GridCell.Tab.1.right" timestamp="1653440539150">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1653329195234" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1653326884201">
+    <state width="1323" height="46" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1653440535449">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1653326884201" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1653418803677">
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1653440535449" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1653421952694">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1653418803677" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1653421952694" />
     <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1653326073869">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

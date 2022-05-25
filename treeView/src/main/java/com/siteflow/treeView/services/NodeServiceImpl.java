@@ -33,6 +33,10 @@ public class NodeServiceImpl implements NodeService{
         Node node = new Node();
         node.setName(createNodeRequest.getName());
         node.setDescription(createNodeRequest.getDescription());
+        if(createNodeRequest.getParentNode() != -1){
+            Node parentNode = this.findById(createNodeRequest.getParentNode());
+            node.setParentNode(parentNode);
+        }
         return this.nodeRepository.save(node);
     }
 

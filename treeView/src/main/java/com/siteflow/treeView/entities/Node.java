@@ -20,4 +20,8 @@ public class Node implements Serializable {
     private String name;
     @Column
     private String description;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "parent_id", referencedColumnName = "id")
+    private Node parentNode;
 }

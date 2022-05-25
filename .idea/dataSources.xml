@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="siteflow_database@localhost" uuid="cb1609e0-7a46-49b9-9e9b-f89e6e85dcee">
+    <data-source source="LOCAL" name="testdb" uuid="6c1b97e6-a4e7-4949-b15f-77d050d91c01">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:tcp://localhost:9092/siteflow_database</jdbc-url>
+      <jdbc-url>jdbc:h2:mem:testdb</jdbc-url>
     </data-source>
   </component>
 </project>
