@@ -19,7 +19,7 @@ public class NodeServiceImpl implements NodeService{
 
     @Override
     public List<Node> findAll() {
-        return nodeRepository.findAllByParentNodeIsNull();
+        return nodeRepository.findAllByParentNodeIsNullOrderByPositionAsc();
     }
 
     @Override
@@ -37,6 +37,9 @@ public class NodeServiceImpl implements NodeService{
         if(createNodeRequest.getParentNode() != -1){
             parentNode = this.findById(createNodeRequest.getParentNode());
             node.setParentNode(parentNode);
+            node.setPosition(this.nodeRepository.countAllByParentNode(parentNode) + 1);
+        }else{
+            node.setPosition(this.nodeRepository.countAllByParentNodeIsNull() + 1);
         }
         Node createNode = this.nodeRepository.save(node);
         if(parentNode != null){

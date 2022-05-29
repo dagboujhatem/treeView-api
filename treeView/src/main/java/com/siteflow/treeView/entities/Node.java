@@ -25,6 +25,8 @@ public class Node implements Serializable {
     private String name;
     @Column
     private String description;
+    @Column
+    private int position;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonBackReference
@@ -33,5 +35,6 @@ public class Node implements Serializable {
     @OneToMany(fetch = FetchType.EAGER,mappedBy = "parentNode")
     @JsonProperty(access = JsonProperty.Access.READ_WRITE)
     @JsonManagedReference
+    @OrderBy("position")
     private List<Node> children;
 }

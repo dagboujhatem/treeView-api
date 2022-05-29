@@ -8,5 +8,7 @@ import java.util.List;
 
 @Repository
 public interface NodeRepository extends JpaRepository<Node,Integer> {
-    List<Node> findAllByParentNodeIsNull();
+    List<Node> findAllByParentNodeIsNullOrderByPositionAsc();
+    int countAllByParentNodeIsNull();
+    int countAllByParentNode(Node parent);
 }
