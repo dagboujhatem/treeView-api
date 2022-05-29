@@ -18,4 +18,5 @@ public class CreateNodeRequest {
     @NotBlank
     private String description;
     private int parentNode;
+    private int position;
 }

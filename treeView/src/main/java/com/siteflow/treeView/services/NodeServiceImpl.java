@@ -34,12 +34,23 @@ public class NodeServiceImpl implements NodeService{
         node.setName(createNodeRequest.getName());
         node.setDescription(createNodeRequest.getDescription());
         Node parentNode = null;
-        if(createNodeRequest.getParentNode() != -1){
-            parentNode = this.findById(createNodeRequest.getParentNode());
-            node.setParentNode(parentNode);
-            node.setPosition(this.nodeRepository.countAllByParentNode(parentNode) + 1);
+        if(createNodeRequest.getPosition() != -1){
+            this.nodeRepository.findAllByParentNodeIsNullAndPositionAfter(createNodeRequest.getPosition()-1)
+                    .forEach(nodeFound -> {
+                        nodeFound.setPosition(nodeFound.getPosition()+1);
+                        this.nodeRepository.save(nodeFound);
+                    });
+            node.setPosition(createNodeRequest.getPosition());
         }else{
-            node.setPosition(this.nodeRepository.countAllByParentNodeIsNull() + 1);
+            if(createNodeRequest.getParentNode() != -1){
+                parentNode = this.findById(createNodeRequest.getParentNode());
+                node.setParentNode(parentNode);
+                node.setPosition(this.nodeRepository.countAllByParentNode(parentNode) + 1);
+            }
+            else{
+                node.setPosition(this.nodeRepository.countAllByParentNodeIsNull() + 1);
+            }
+
         }
         Node createNode = this.nodeRepository.save(node);
         if(parentNode != null){

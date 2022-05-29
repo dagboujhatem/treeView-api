@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c63cf87-53b8-4e8c-8104-843e25c740b7" name="Default Changelist" comment="add uncommited files">
+    <list default="true" id="6c63cf87-53b8-4e8c-8104-843e25c740b7" name="Default Changelist" comment="delete and update cascade">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/repositories/NodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/repositories/NodeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/requests/CreateNodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/requests/CreateNodeRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/services/NodeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/services/NodeServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +92,7 @@
       <workItem from="1653812589392" duration="4103000" />
       <workItem from="1653843064457" duration="559000" />
       <workItem from="1653843656278" duration="146000" />
-      <workItem from="1653843986782" duration="3474000" />
+      <workItem from="1653843986782" duration="7020000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1653417945921</created>
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653845763558</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="delete and update cascade">
+      <created>1653847708950</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653847708950</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +178,8 @@
     <MESSAGE value="get first level of nodes and all children" />
     <MESSAGE value="add position" />
     <MESSAGE value="add uncommited files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add uncommited files" />
+    <MESSAGE value="delete and update cascade" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete and update cascade" />
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1653327003499">
@@ -190,38 +198,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1653822460812" />
-    <state width="1323" height="40" key="GridCell.Tab.0.bottom" timestamp="1653847407649">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1653857822658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="40" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653847407649" />
-    <state width="1323" height="40" key="GridCell.Tab.0.center" timestamp="1653847407649">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653857822658" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1653857822657">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="40" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1653847407649" />
-    <state width="1323" height="40" key="GridCell.Tab.0.left" timestamp="1653847407648">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1653857822657" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1653857822657">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="40" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1653847407648" />
-    <state width="1323" height="40" key="GridCell.Tab.0.right" timestamp="1653847407649">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1653857822657" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1653857822658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="40" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1653847407649" />
-    <state width="1323" height="40" key="GridCell.Tab.1.bottom" timestamp="1653847407650">
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1653857822658" />
+    <state width="1323" height="2" key="GridCell.Tab.1.bottom" timestamp="1653857822658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="40" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653847407650" />
-    <state width="1323" height="40" key="GridCell.Tab.1.center" timestamp="1653847407650">
+    <state width="1323" height="2" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653857822658" />
+    <state width="1323" height="2" key="GridCell.Tab.1.center" timestamp="1653857822658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="40" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1653847407650" />
-    <state width="1323" height="40" key="GridCell.Tab.1.left" timestamp="1653847407650">
+    <state width="1323" height="2" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1653857822658" />
+    <state width="1323" height="2" key="GridCell.Tab.1.left" timestamp="1653857822658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="40" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1653847407650" />
-    <state width="1323" height="40" key="GridCell.Tab.1.right" timestamp="1653847407650">
+    <state width="1323" height="2" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1653857822658" />
+    <state width="1323" height="2" key="GridCell.Tab.1.right" timestamp="1653857822658">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="40" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1653847407650" />
+    <state width="1323" height="2" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1653857822658" />
     <state width="1323" height="223" key="GridCell.Tab.2.bottom" timestamp="1653844222129">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
