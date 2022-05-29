@@ -32,7 +32,7 @@ public class Node implements Serializable {
     @JsonBackReference
     private Node parentNode;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "parentNode")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER,mappedBy = "parentNode")
     @JsonProperty(access = JsonProperty.Access.READ_WRITE)
     @JsonManagedReference
     @OrderBy("position")

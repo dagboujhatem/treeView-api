@@ -66,6 +66,21 @@ public class NodeServiceImpl implements NodeService{
     public void delete(int id) {
         Optional<Node> nodeData = this.nodeRepository.findById(id);
         if (nodeData.isPresent()) {
+            Node parentNode = nodeData.get().getParentNode();
+            if(parentNode != null)
+            {
+                this.nodeRepository.findAllByParentNodeAndPositionAfter(parentNode, nodeData.get().getPosition())
+                        .forEach(node -> {
+                            node.setPosition(node.getPosition()-1);
+                            this.nodeRepository.save(node);
+                        });
+            }else{
+                this.nodeRepository.findAllByParentNodeIsNullAndPositionAfter(nodeData.get().getPosition())
+                        .forEach(node -> {
+                            node.setPosition(node.getPosition()-1);
+                            this.nodeRepository.save(node);
+                        });
+            }
             this.nodeRepository.deleteById(id);
         } else {
             throw new ResourceNotFoundException("Node not found.");

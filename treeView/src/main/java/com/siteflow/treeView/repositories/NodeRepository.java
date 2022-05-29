@@ -11,4 +11,7 @@ public interface NodeRepository extends JpaRepository<Node,Integer> {
     List<Node> findAllByParentNodeIsNullOrderByPositionAsc();
     int countAllByParentNodeIsNull();
     int countAllByParentNode(Node parent);
+
+    List<Node> findAllByParentNodeAndPositionAfter(Node parent, int position);
+    List<Node> findAllByParentNodeIsNullAndPositionAfter(int position);
 }
