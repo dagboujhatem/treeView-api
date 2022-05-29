@@ -37,9 +37,19 @@ public class TreeViewApplication implements CommandLineRunner {
         nodeList.add(node2);
 
         Node node3 = new Node();
-        node3.setName("Bootstrap");
+        node3.setName("CSS Frameworks");
         node3.setDescription("");
         nodeList.add(node3);
+
+        Node node4 = new Node();
+        node4.setName("Bootstrap");
+        node4.setDescription("");
+        node4.setParentNode(node3);
+        nodeList.add(node4);
+
+        List<Node> cssFramework = new ArrayList<>();
+        cssFramework.add(node4);
+        node3.setChildren(cssFramework);
 
 		nodeRepository.saveAll(nodeList);
 	}

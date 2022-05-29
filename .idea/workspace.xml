@@ -11,13 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c63cf87-53b8-4e8c-8104-843e25c740b7" name="Default Changelist" comment="add CommandLineRunner implémentation  to add the default nodes">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/TreeViewApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/TreeViewApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/entities/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/entities/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/requests/CreateNodeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/playload/requests/CreateNodeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/repositories/NodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/repositories/NodeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/services/NodeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/java/com/siteflow/treeView/services/NodeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/treeView/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/treeView/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,10 @@
       <workItem from="1653321260104" duration="6765000" />
       <workItem from="1653417532675" duration="3447000" />
       <workItem from="1653429911429" duration="4489000" />
-      <workItem from="1653514008614" duration="172000" />
+      <workItem from="1653514008614" duration="7923000" />
+      <workItem from="1653583551525" duration="2464000" />
+      <workItem from="1653598385994" duration="585000" />
+      <workItem from="1653812589392" duration="2332000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1653417945921</created>
@@ -113,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653421945349</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add parentNode">
+      <created>1653514847807</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653514847807</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +145,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="commit other changes" />
     <MESSAGE value="add CommandLineRunner implémentation  to add the default nodes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add CommandLineRunner implémentation  to add the default nodes" />
+    <MESSAGE value="add parentNode" />
+    <option name="LAST_COMMIT_MESSAGE" value="add parentNode" />
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1653327003499">
@@ -156,46 +165,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1653327166599" />
-    <state width="1323" height="46" key="GridCell.Tab.0.bottom" timestamp="1653440539150">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom" timestamp="1653814358107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="46" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
-    <state width="1323" height="46" key="GridCell.Tab.0.center" timestamp="1653440539150">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653814358107" />
+    <state width="1323" height="235" key="GridCell.Tab.0.center" timestamp="1653814358107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="46" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
-    <state width="1323" height="46" key="GridCell.Tab.0.left" timestamp="1653440539150">
+    <state width="1323" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1653814358107" />
+    <state width="1323" height="235" key="GridCell.Tab.0.left" timestamp="1653814358107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="46" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
-    <state width="1323" height="46" key="GridCell.Tab.0.right" timestamp="1653440539150">
+    <state width="1323" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1653814358107" />
+    <state width="1323" height="235" key="GridCell.Tab.0.right" timestamp="1653814358107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="46" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
-    <state width="1323" height="46" key="GridCell.Tab.1.bottom" timestamp="1653440539150">
+    <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1653814358107" />
+    <state width="1323" height="235" key="GridCell.Tab.1.bottom" timestamp="1653814358107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="46" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
-    <state width="1323" height="46" key="GridCell.Tab.1.center" timestamp="1653440539150">
+    <state width="1323" height="235" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653814358107" />
+    <state width="1323" height="235" key="GridCell.Tab.1.center" timestamp="1653814358107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="46" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
-    <state width="1323" height="46" key="GridCell.Tab.1.left" timestamp="1653440539150">
+    <state width="1323" height="235" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1653814358107" />
+    <state width="1323" height="235" key="GridCell.Tab.1.left" timestamp="1653814358107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="46" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
-    <state width="1323" height="46" key="GridCell.Tab.1.right" timestamp="1653440539150">
+    <state width="1323" height="235" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1653814358107" />
+    <state width="1323" height="235" key="GridCell.Tab.1.right" timestamp="1653814358107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="46" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1653440539150" />
+    <state width="1323" height="235" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1653814358107" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1653440535449">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1653440535449" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1653421952694">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1653514868757">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1653421952694" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1653514868757" />
     <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1653326073869">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

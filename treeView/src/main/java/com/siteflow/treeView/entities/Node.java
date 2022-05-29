@@ -1,9 +1,14 @@
 package com.siteflow.treeView.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "nodes")
@@ -21,7 +26,12 @@ public class Node implements Serializable {
     @Column
     private String description;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "parent_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
     private Node parentNode;
+
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "parentNode")
+    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
+    @JsonManagedReference
+    private List<Node> children;
 }
