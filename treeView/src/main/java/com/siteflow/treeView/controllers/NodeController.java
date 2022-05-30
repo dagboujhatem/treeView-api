@@ -44,4 +44,9 @@ public class NodeController {
         nodeService.delete(id);
         return new ApiResponse<>(HttpStatus.OK.value(), "Delete one node.", null);
     }
+
+    @RequestMapping(value ="/nodes/{id}/save-order/{position}/{targetIndex}/{sourceIndex}", method = RequestMethod.PUT)
+    public ApiResponse<List<Node>> saveOrder(@PathVariable int id, @PathVariable int position, @PathVariable int targetIndex, @PathVariable int sourceIndex) {
+        return new ApiResponse<>(HttpStatus.OK.value(), "order saved successfully.", nodeService.saveOrder(id, position, targetIndex, sourceIndex));
+    }
 }

@@ -16,6 +16,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Node implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

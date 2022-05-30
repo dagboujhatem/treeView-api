@@ -5,6 +5,7 @@ import com.siteflow.treeView.exceptions.ResourceNotFoundException;
 import com.siteflow.treeView.playload.requests.CreateNodeRequest;
 import com.siteflow.treeView.playload.requests.UpdateNodeRequest;
 import com.siteflow.treeView.repositories.NodeRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class NodeServiceImpl implements NodeService{
 
     @Autowired
@@ -96,5 +98,46 @@ public class NodeServiceImpl implements NodeService{
         } else {
             throw new ResourceNotFoundException("Node not found.");
         }
+    }
+
+    @Override
+    public List<Node> saveOrder(int id, int position,int targetIndex,int sourceIndex){
+        List<Node> nodeList = this.findAll();
+        Node sourceNode = nodeList.get(sourceIndex);
+        Node targetNode = nodeList.get(targetIndex);
+        if(sourceNode!=null && targetNode!=null)
+        {
+            if(Math.abs(sourceIndex - targetIndex)> 1){
+                List<Node> updateList = null;
+                if(sourceIndex < targetIndex){
+                    int newTargetPosition = sourceNode.getPosition();
+                    targetNode.setPosition(newTargetPosition);
+                    this.nodeRepository.save(targetNode);
+                    updateList = nodeList.subList(sourceIndex, targetIndex);
+                    updateList.forEach(node -> {
+                        log.info(String.valueOf(node.getId()));
+                        node.setPosition(node.getPosition() + 1);
+                        this.nodeRepository.save(node);
+                    });
+                }else{
+                    int newTargetPosition = sourceNode.getPosition();
+                    targetNode.setPosition(newTargetPosition);
+                    this.nodeRepository.save(targetNode);
+                    updateList = nodeList.subList(targetIndex+1, sourceIndex+1);
+                    updateList.forEach(node -> {
+                        log.info(String.valueOf(node.getId()));
+                        node.setPosition(node.getPosition() - 1);
+                        this.nodeRepository.save(node);
+                    });
+                }
+            }else {
+                int newTargetPosition = sourceNode.getPosition();
+                targetNode.setPosition(newTargetPosition);
+                this.nodeRepository.save(targetNode);
+                sourceNode.setPosition(position);
+                this.nodeRepository.save(sourceNode);
+            }
+        }
+        return this.findAll();
     }
 }

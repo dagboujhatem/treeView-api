@@ -12,4 +12,5 @@ public interface NodeService {
     Node save(CreateNodeRequest createNodeRequest);
     Node update(int id, UpdateNodeRequest updateNodeRequest);
     void delete(int id);
+    List<Node> saveOrder(int id, int position,int targetIndex,int sourceIndex);
 }
