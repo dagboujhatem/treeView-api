@@ -5,7 +5,6 @@ import com.siteflow.treeView.exceptions.ResourceNotFoundException;
 import com.siteflow.treeView.playload.requests.CreateNodeRequest;
 import com.siteflow.treeView.playload.requests.UpdateNodeRequest;
 import com.siteflow.treeView.repositories.NodeRepository;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@Slf4j
 public class NodeServiceImpl implements NodeService{
 
     @Autowired
@@ -66,7 +64,7 @@ public class NodeServiceImpl implements NodeService{
     public Node update(int id, UpdateNodeRequest updateNodeRequest) {
         Optional<Node> nodeData = this.nodeRepository.findById(id);
         if (nodeData.isPresent()) {
-            Node oldNode = this.nodeRepository.findById(id).get();
+            Node oldNode = nodeData.get();
             oldNode.setName(updateNodeRequest.getName());
             oldNode.setDescription(updateNodeRequest.getDescription());
             return this.nodeRepository.save(oldNode);
@@ -115,7 +113,6 @@ public class NodeServiceImpl implements NodeService{
                     this.nodeRepository.save(targetNode);
                     updateList = nodeList.subList(sourceIndex, targetIndex);
                     updateList.forEach(node -> {
-                        log.info(String.valueOf(node.getId()));
                         node.setPosition(node.getPosition() + 1);
                         this.nodeRepository.save(node);
                     });
@@ -125,7 +122,6 @@ public class NodeServiceImpl implements NodeService{
                     this.nodeRepository.save(targetNode);
                     updateList = nodeList.subList(targetIndex+1, sourceIndex+1);
                     updateList.forEach(node -> {
-                        log.info(String.valueOf(node.getId()));
                         node.setPosition(node.getPosition() - 1);
                         this.nodeRepository.save(node);
                     });
